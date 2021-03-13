@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+    <link rel="shortcut icon" href="imagens-dsm/favicon_io/favicon.ico" type="image/x-icon">
+    <style>
+        /*regras iniciadas com # se aplicam ao elemento com o id de mesmo nome*/
+        #logo{ 
+            width: 100%;/* A imagem ocupará 100% da largura disponível*/
+            max-width: 360px; /*largura maxima em pixels */
+            min-width: 50px;
+             } 
+        figcaption{
+            font-family: Calibri, Arial, sans;
+            font-style: italic;
+            }
+        figure{
+            text-align: center;
+            background-image: url("imagens-dsm/metal.jpg");
+            }
+        body {
+            background-image: url("imagens-dsm/light-carbonfiber.png"); /*iamgem de fundo da página, por padrão, a imagem se repete automaticamente para cobrir todo o fundo*/
+            background-repeat: repeat; /* no-repeat - comando para a a imagem não se repetir no fundo*/
+            }
+    </style>
+</head>
+<body>
+    <!-- Atributos da tag <img> (imagem)
+        src (source) -> o caminho para o arquivo de imagem que será exibido
+        alt (texto alternativo) -> um texto que será exibido no lugar da imagem caso o respectivo arquivo não seja encontrado
+    -->
+    <img id= "logo" src="imagens-dsm/apptiva-logo.png" alt="Logotipo da empresa Apptiva">
+    <!-- <figure> para quando as imagens precisam de legenda-->
+    <figure> <!-- elemente de bloco -->
+        <img src="imagens-dsm/distance-education-1000px.jpg" alt="Educação a Distância" title="Venha estudar conosco!">
+        <!--<figcaption> Legenda da Imagem (semântico). Pode vir antes ou depois da <img>-->
+        <figcaption>A Apptiva oferece as melhores tecnologias para Educação a Distância. Faça como essa aluna!</figcaption>
+    </figure>
+    <!-- regras de css também poder ser atribuidas a um elemento por meio do atributo style -->
+    <img style="width: 50%; border: 1px solid blue;" src="imagens-dsm/svg-logo.svg" alt="Logotipo do formato SVG">
+    <!-- 
+        a tag <img> pertence ao grupo de ELEMENTOS DE BLOCOS, ou seja, vários <img> em sequencia, havendo largura soficiente, serão exibidos na mesma linha.
+        já a tag <div> (divisão) pertence ao grupo dos ELEMENTOS DE BLOCOS, cada elemento desse grupo ocupará, por padrão, toda a largura disponivel, deslocando os demais para baixo.
+    -->
+    <div style="background: green;">
+        <img src="imagens-dsm/apptiva-icon.png" alt="ícone do Apptiva">
+    </div>
+    <!--
+        Via CSS, é possivel fazer um elemente de linha se comportar como elemento de bloco
+    -->
+    <img style="display: block;" src="imagens-dsm/apptiva-icon.png" alt="ícone do Apptiva">
+
+    <img src="imagens-dsm/apptiva-icon.png" alt="ícone do Apptiva">
+    <img src="imagens-dsm/apptiva-icon.png" alt="ícone do Apptiva">
+</body>
+</html>

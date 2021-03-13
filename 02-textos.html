@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de textos</title>
+    <style> /*CSS*/
+        address{
+            background: yellow;
+            display: inline; /* fazendo elemento ficar em linha */
+            font-style: normal; /*tira o italico*/
+            text-decoration: underline;
+        }
+        strong{
+            color: red;
+        }
+        mark{
+            background:chartreuse;
+        }
+        h1{ 
+            text-align: center; /*valores para text-align - left right center justify*/
+        }
+        p.dir { /*apenas <p class=dir> são afetados*/
+            text-align: right;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Alt+Z = Deixa toda a linha de codigo visivel na tela, quebra de linha-->
+    <h1>Formatação de texto</h1>
+    <p class="dir">História baseada em fatos reais.</p>
+    <p>Orkutinson morada na <address>RUA DO SOBRE E DESCE, 333</address>,
+        e seu e-mail era <address>ortukilson@gmail.com</address></p>
+    <!--tag <u> = underline (sublinahdo)"-->
+    <!--tag <adress> = endereço -->
+    <p>ele estava em uma <b>escola estadual</b> e sua matéria preferida era <i>Matemática</i></p>
+    <!--<i> italico (visual apenas)
+        <b> negrito (visual apenas)-->
+    <p>ele estava em uma <strong>escola estadual</strong> e sua matéria preferida era <em>Matemática</em></p>
+    <!--<em> enfase (emphasis) (semantica)
+        <strong> texto mais importante (forte em ingles) (semantica)-->
+    <p>Ele também gostava de usar <mark>caneta marca texto</mark> para descatar os trechos mais importantes do seu caderno</p>
+    <!--<mark> marcação de texto-->
+    <p>Sua professora achava que ele era <strike>meio burro</strike> não muito inteligante, já que sempre tinha dificuldade nas provas</p>
+    <!--<Strike> traço através do texto(tachado) (obsoleto, não usar)-->
+    <p>Sua professora achava que ele era <del>meio burro</del> não muito inteligante, já que sempre tinha dificuldade nas provas</p>
+    <!--<del> texto apagado (Semantica)-->
+    <p>Depois que fez a recuperação, sua nota foi de 6,7 <ins>o suficiente para sua aprovação</ins>.</p>
+    <!--<ins> texto inserido (semantico)-->
+    <p>Orkutinson também gosta de fórmulas. Suas preferidas eram H<sub>2</sub>O e E=mc<sup>2</sup></p>
+    <!--<sub> texto subscrito
+        <sup> texto sobrescrito (superscript)-->
+    <p>Sua Frase Favorita era <quote>"Penso, Logo existo" (Descartes).</quote> E seu trecho de música preferido era:</p>
+    <blockquote>
+        Há tantos mundo diferentes <br>
+        Tantoa sóis diferentes. <br>
+        E nós temos apenas um mundo, <br>
+        Mas vivemos em mundos. <br>
+        (Dire Straits, Brothers in Arms)
+    </blockquote>
+    <!--<quote> = citações no meio de um paragrafo
+        <blockquote> = um bloco de citação (com varias linhas, por exemplo-->
+    <p>Em suas horas vagas, Orkutilson era um mento ativo da <abbr title="Associação Comercial do Bairro do Limão">ASMOBALI</abbr> e estudava <abbr title="HyperText Markup Language">HTML</abbr>. Suas tags favoritas eram: <code>&lt;blockquote&gt;</code> e <code>&lt;address&gt;</code></p>
+    <!-- <abbr> = defionição de abreviaturas-->
+    <!-- <code> = apresenta código de programação ou marcação, no caso de HTML, os sinais < e > precisar sem substituidos por &lt; e &gt; , respectivamente-->
+    
+    <p class="dir"><em>Autor: Desconhecido</em></p>
+
+</body>
+</html>

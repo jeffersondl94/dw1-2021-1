@@ -6,7 +6,7 @@ a {
 /* links já visitados */ 
 a:visited {
     color: green;
-    filter: brightness(50%);/*cor 50% mais escura */
+    filter: brightness(50%);/*Filter não pode ser aplicado no css */ /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/:visited */
 }
 
 /* link enquanto o mause esta sobre ele */

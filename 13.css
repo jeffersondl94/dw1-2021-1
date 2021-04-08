@@ -1,0 +1,65 @@
+/*
+    Unidade de medidas
+    1- Unidades absolutas
+        -px (pixel): correnponde a um ponto de iluminação da tela, ou quanto isso não puder ser determinado (no papel, por exemplo), equivale a 1/96 de uma polegada, (1 polegada = 2,54cm). Seu tamanho, portanto, depende da resolução da tela.
+        -pt (point): medida usada para tamanho de fontes. Equivale a 1/72  de uma polegada.
+        -cm (centimentro): para impressão
+        -mm (milimetro): para impressão
+        -in (inches, polegadas): para impressão
+
+    2- Unidades relativas
+        -em: usada para fontes. Significa 100% do tamanho da fonte do elemento pai.
+        -rem: usada para fontes. Significa 100% do tamanho da fonte configurado para o elemento <html> (elemento raiz)
+        - %: sempre em relação ao tamanho do pai
+        -vw: 1% da largura do viewporte (area de visualização do navegador)
+        -vh: 1% da altura do viewporte
+        
+
+*/
+
+html { /*elemento raiz*/
+    font-size: 20px;
+}
+
+* { /* todos os elementos do html*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div {
+    padding: 20px;
+    border: 2px solid black;
+    margin: 10px;
+    text-align: center;
+}
+
+#conteiner {
+    background-color: goldenrod;
+    font-size: 16pt;
+    height: 600px;
+    width: 70vw; /* 70% da largura da janela*/
+}
+#box1 {
+    background-color: cadetblue;
+    font-size: 30pt;
+    height: 20%; /* 20% do tamanho do pai */
+}
+#box2 {
+    background-color: hotpink;
+    /* tamanho da fonte do pai: 16pt.   1.5em * 16pt = 24pt*/
+    font-size: 1.5em;/*equivalente a 150%*/
+    width: 50%; /* metade da largura do pai */
+    height: 12vh; /* 12% da altura da janela (E não do pai!)*/
+ }
+#box3 {
+    background-color: mediumpurple;
+    font-size: 150%; /*equivalente a 1.5em*/
+}
+#box3-1 {
+    font-size: 0.5em; /*metade do tamanho da fonte do pai */    
+                    /* caso use REM é relativo a raiz */
+}
+#box4 {
+    background-color: aquamarine;
+    font-size: 3rem; /*  rem= 3* 20px do tamanho da tonte do elemento raiz = 60px */
+    width: 40vw; /* 40% da largura da janela (e não do pai!)*/
+}

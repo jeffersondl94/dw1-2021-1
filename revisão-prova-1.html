@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* 
+            Hierarquia de regras css
+            1 - regras de #id prevalecem sobre regras de .class
+            2 - regras de .class prevalecem sobre regras de elemento
+            3 - entre regras do mesmo tipo, prevalece a que foi aplicada por ultimo */
+        div { /* regra de elemento - aplicase a todos os div */
+            border: 2px dotted blue;
+            margin: 30px;
+            padding: 10px;
+        }
+        #cx1{/* regra de id */
+            text-align: center;
+            border: 3px solid green;
+        }
+        #cx3{
+            text-align: right;
+        }
+        .fundo-amarelo{/* regra de class */
+            background-color: yellow;
+            font-size: 30px;
+            border: 2px solid orangered;
+        }
+        .fundo-azul{ /* regras da mesma class prevalece a ultima alteração */
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="cx1" class="fundo-amarelo fundo-azul">caixa 1</div>
+    <div id="cx2" >caixa 2</div>
+    <div id="cx3" class="fundo-amarelo fundo-azul">caixa 3</div>
+</body>
+</html>

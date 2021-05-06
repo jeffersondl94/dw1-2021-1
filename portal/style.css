@@ -1,8 +1,21 @@
+/* @import, quando existem, devem ser o primeiro item de um arquivo css ... fonte selecionada do Google Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 /*CSS reset*/
 * { /*todos os elementos*/
     padding: 0;
     margin: 0;
-    font-family: 'calibri';
+    /* exemplo de familia de fonte sem serifa
+    font-family: calibri, arial, sans;*/
+    
+    /* exemplo de familia de fonte com serifa
+    font-family: Georgia, 'Times New Roman', serif;*/
+
+    /* exemplo de familia de fonte monoespaçada
+    font-family: Consolas, 'Courier New', monospace;*/
+
+    font-family: Raleway, Calibre, Arial, sans;
 }
 header {
     background-color: #550000;

@@ -2,6 +2,7 @@
 * { /*todos os elementos*/
     padding: 0;
     margin: 0;
+    font-family: 'calibri';
 }
 header {
     background-color: #550000;
@@ -11,4 +12,9 @@ header {
 nav ul li{
     display: inline-block;
     margin: 10px;
+    
+}
+nav {
+    background-color: #ff7f2A; /*cor do fundo*/
+    color:#550000; /*cor da fonte*/
 }

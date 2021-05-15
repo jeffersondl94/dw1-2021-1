@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quebrada On Line</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+
 </head>
 <body>
     <header> <!--Cabeçalho-->
@@ -25,7 +31,7 @@
     </nav>
 
     <div id="content"> <!--Area de Conteudo-->
-        <section id="principal"> <!-- section=agrupador de conteudos semelhantes; dentro de uma section, segundo as especificações, espera-se ter um titulo-->
+        <main> <!-- divisão principal do site-->
             <h1>Notícias</h1>
             <article class="destaque"><!--representa um artigo ou noticia-->
                 <h2>Social</h2>
@@ -57,28 +63,42 @@
                 <p>População revoltada contra o aumento de preços promovidos pelo Ademar do Bar</p>
             </article>
             
-        </section>
+        </main>
 
-        <section id="secundaria">
-            <h1>Conteúdo Relacionado</h1>
-
-            <aside>
-                <figure> <!--assunto secundario-->
+        <aside> <!--assunto secundario-->
+            <article>
+                <figure> 
                     <img src="img/folhas320x240.png" alt="Foto de Folhas" title="Foto: Sohail">
                     <figcaption>Foto: Sohail</figcaption>
                 </figure>
                 <h1><a href="#">Mulher do verdureiro emagrece 30kg tomando chá doce e choca a quebrada; SAIBA MAIS</a></h1>
-                
-            </aside>
+            </article>
+
+            <article>
+                <figure> 
+                    <img src="img/executivo320x240.jpg" alt="Executivo" title="Foto: Andrea Piacquadio">
+                    <figcaption>Foto: Andrea Piacquadio</figcaption>
+                </figure>
+                <h1><a href="#">Tenho uma oportunidade para você! NÃO É PIRÂMIDE</a></h1>
+            </article>
             
-        </section>
+        </aside>
        
-
-        
-
     </div>
 
     <footer><!--rodapé-->
+        <ul>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Nossa missão</a></li>
+            <li><a href="#">Comercial</a></li>
+        </ul>
+        <address>
+            Rua do Sobe e Desce, 33<br>
+            Morro Alto de Cima/SP<br>
+            <a href="tel:+551666611111">(16) 6661 1111</a><br>
+            <a href="mailto:contato@qol.com.br">contato@qol.com.br</a>
+        </address>
+
 
     </footer>
 </body>

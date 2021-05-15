@@ -59,7 +59,7 @@ nav {
     display: flex; /*este elemento e seus filhos usarão flexbo*/
     flex-direction: row; /*os filhos ficarão em linha*/
 }
-section{
+main > a{
     background-color: var(--cor-banca);
     padding: 24px;
     margin-bottom: 20px;
@@ -68,21 +68,21 @@ section{
     flex-grow: 1; /*1 unidade de largura (padrão)*/
     
 }
-#principal{
+main{
     /*flex-grow: 3;/*3 unidade de largura*/
     width: 70%;
 }
-#secundaria{
+aside{
     margin-left: 20px;
     background-color: var(--cor-fundo-escura);
     width: 30%;
 }
 
-section article { /*article que estão dentro de uma section*/
+main > article, aside > article { /*article que estão dentro de uma  main e aside*/
     margin: 24px 0px; /*24px top/bottom ; 0 left/right */
 }
 
-section > h1{ /*apenas os h1 que são filhos diretos de section*/
+main > h1, aside > h1 { /*apenas os h1 que são filhos diretos de main e aside*/
     text-transform: uppercase; /*deixar o texto em maiusculas*/
     color: var(--cor-secundaria);
 }
@@ -132,13 +132,40 @@ article figcaption {
     flex-direction: row; /*os filhos ficarão em linha*/
 }
 
-#secundaria > aside > figure  {
+aside > article > figure  {
     text-align: center;
     /*display: block;
     margin: 0 auto; /*margem auto a esquerda e a direita centraliza o elemento quando esse é dilplay block */
 }
 
-#secundaria > aside > h1 > a {
+aside> article > h1 > a {
     font-size: 1rem;
     color: black;
+    
+}
+aside> article > h1 {
+    margin: 10px 10px;
+    
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    padding: 24px;
+    color: var(--cor-banca);
+    display: flex;   /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    flex-direction: row; 
+    align-content: space-around;/*espaço automaticamente entre os itens de um flexbox*/
+}
+footer a {
+    color: var(--cor-banca);
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0px 10px;
+    border-right: 1px solid white; 
+    
+}
+address {
+    padding-left: 10px;
 }

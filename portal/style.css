@@ -41,16 +41,63 @@ a:hover{/*mause passando em cima do link*/
 header {
     background-color: var(--cor-primaria);
     padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#social {
+    background-color: transparent;
+}
+
+#social img {
+    width: 32px;
+}
+
+#social a {
+    color: var(--cor-banca);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#social a span {
+    margin-left: 6px;
+    display: none; /*esconder o texto dos links*/
+}
+
+#social a:hover span {
+    display: inline; /*mostra novamente o texto ao passar o mouse*/ 
 }
 
 nav ul li{
     display: inline-block;
     margin: 10px;
-    
 }
+
 nav {
     background-color: var(--cor-secundaria); /*cor do fundo*/
-    color: var(--cor-primaria); /*cor da fonte*/
+    color: var(--cor-banca); /*cor da fonte*/
+}
+
+#menu {
+    padding: 0 20px;
+}
+
+#menu li {
+    margin: 10px 0;
+
+}
+
+#menu a {
+    height: 100%;
+    padding: 10px;
+    transition: 300ms;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-banca);
+}
+
+#menu a:hover {
+    filter: brightness(0.8); /*diminui o brilho em 20%, deixando mais escuro*/
 }
 
 #content {
@@ -76,6 +123,7 @@ aside{
     margin-left: 20px;
     background-color: var(--cor-fundo-escura);
     width: 30%;
+    border-radius: 5px;
 }
 
 main > article, aside > article { /*article que estão dentro de uma  main e aside*/
@@ -154,7 +202,7 @@ footer {
     color: var(--cor-banca);
     display: flex;   /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
     flex-direction: row; 
-    align-content: space-around;/*espaço automaticamente entre os itens de um flexbox*/
+    justify-content: space-around;/*espaço automaticamente entre os itens de um flexbox*/
 }
 footer a {
     color: var(--cor-banca);
@@ -163,9 +211,20 @@ footer a {
 footer ul li {
     display: inline-block;
     padding: 0px 10px;
-    border-right: 1px solid white; 
-    
+    border-right: 2px solid white; 
+}
+
+footer ul li:last-child{/*tirar a borda direita do ultimo li*/
+    border-right: none;
 }
 address {
     padding-left: 10px;
 }
+
+footer > img {
+    width: 200px;
+    height: 100%;    
+}
+
+
+

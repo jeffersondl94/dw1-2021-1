@@ -27,6 +27,7 @@
 
     font-family: Raleway, Calibre, Arial, sans;
     font-size: 16px;
+    box-sizing: border-box; /*bordas e margens sejam consideradas no tamanho total do elemento*/
 }
 
 a{/*cor de todos os links do site*/
@@ -103,7 +104,7 @@ nav {
 #content {
     background-color: var(--cor-fundo-clara);
     padding: 16px;
-    display: flex; /*este elemento e seus filhos usarão flexbo*/
+    display: flex; /*este elemento e seus filhos usarão flexbox*/
     flex-direction: row; /*os filhos ficarão em linha*/
 }
 main > a{
@@ -157,6 +158,7 @@ article > h2{
 .destaque p {
     color: black;
     font-size: 1.5rem;
+    
 }
 .destaque > h1 > a {
     font-size:  2.5rem;
@@ -167,10 +169,11 @@ article > h2{
 }
 img{
     border-radius: 4px;
+    
 }
 .destaque > div > figure > img {
-    width: 400px;
-    margin-right: 24px;
+    width: 450px;
+    margin-right: 24px;    
 }
 article figcaption {
     font-size: 0.5rem;
@@ -180,20 +183,25 @@ article figcaption {
     flex-direction: row; /*os filhos ficarão em linha*/
 }
 
-aside > article > figure  {
+aside figure  {
     text-align: center;
     /*display: block;
     margin: 0 auto; /*margem auto a esquerda e a direita centraliza o elemento quando esse é dilplay block */
+    padding: 10px;
 }
+aside img{
+    max-width: 100%; /*largura maxima é 100% do pai*/
+   
+}
+
 
 aside> article > h1 > a {
     font-size: 1rem;
-    color: black;
-    
+    color: black;    
 }
 aside> article > h1 {
-    margin: 10px 10px;
-    
+    margin: 0px 10px;
+    text-align: center;
 }
 
 footer {
@@ -223,8 +231,60 @@ address {
 
 footer > img {
     width: 200px;
-    height: 100%;    
+    height: 100%;  
+    padding-left: 10px;  
 }
 
+/*regras para larguras especificas de tela*/
+@media screen and (max-width: 1020px) { /*breakpoint (ponto de quebra ) */
+    main { 
+        width: 60%;
+    }
+    aside {
+        width: 40%;
+    }
+    .foto-texto {
+        flex-direction: column; /*os filhos ficarão em coluna*/
+    }
+    .destaque > div > figure > img {
+        margin-right: 0px;
+        /* margin-bottom: 24px; */
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 800px) { 
+    /*
+    colocar o menu em um botão
+    */
 
 
+    #content {
+        flex-direction: column; /*os filhos ficarão em coluna*/
+    }
+    main { 
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+        margin-left:0px;
+    }
+
+    .destaque img { /*centralizar a imagem automaticamente*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer > * {
+        margin-bottom: 12px;
+    }
+    address {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /*colocar o logo principal e os icones de redes sociais em coluna*/
+
+}

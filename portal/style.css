@@ -101,6 +101,46 @@ nav {
     filter: brightness(0.8); /*diminui o brilho em 20%, deixando mais escuro*/
 }
 
+#menu-contraido {
+    
+    display: inline-block;
+    position: relative;
+}
+
+#menu-contraido input {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100; /*traz o input para cima*/
+    opacity: 0; /*esconde o input*/
+    display: none;
+}
+
+#menu-contraido span {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-color: var(--cor-primaria);
+    border-radius:  4px;
+    border: 2px solid white;
+    background-image: url(img/menu-icon-48x48.png);
+    background-size: 40px;
+    background-position: center;
+    cursor: pointer; /*cursor de mãozinho*/
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#menu-contraido input:checked ~ span {/*seletor ~ : seleciona o proximo elemento (irmão)*/
+    background-image: url(img/close-icon-48x48.png);
+    
+}
+
+
+
 #content {
     background-color: var(--cor-fundo-clara);
     padding: 16px;
@@ -253,10 +293,31 @@ footer > img {
     }
 }
 @media screen and (max-width: 800px) { 
-    /*
-    colocar o menu em um botão
-    */
 
+    #menu ul li { /*menu vertical*/
+        display: block;
+        margin: 0px;
+        padding: 12px 0;
+        margin-left: -10px;
+        width: 100%;
+    }
+
+    #menu-contraido ul { /*esconder menu vertical*/
+        display: none;
+    }
+
+    #menu-contraido input:checked ~ul { /*mostrar menu vertical*/
+        display: block;
+    }
+
+    #menu-contraido input, #menu-contraido span {
+        display: block;
+    }
+
+    #menu-contraido {
+        margin: 12px 0px;
+        width: 100%;
+    }
 
     #content {
         flex-direction: column; /*os filhos ficarão em coluna*/
@@ -288,3 +349,5 @@ footer > img {
     /*colocar o logo principal e os icones de redes sociais em coluna*/
 
 }
+
+
